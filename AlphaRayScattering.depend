@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1687783838 source:d:\glutprojects\alpharayscattering\main.cpp
+	<stdio.h>
+	<windows.h>
+	<cmath>
+	<GL/glut.h>
+
+1684331151 c:\program files\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
