@@ -17,6 +17,7 @@ void init (void)
 {
     glClearColor (0.0, 0.0, 0.0, 0.0); // Set display-window color to white.
     glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
     glMatrixMode (GL_PROJECTION); // Set projection parameters.
     glLoadIdentity();
     gluOrtho2D (0.0, 2000.0, 0.0, 1000.0);
@@ -46,6 +47,7 @@ void threedinit()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(viewer[0],viewer[1],viewer[2],0,0,0,0,1,0);
+
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 }
 void cube3d()
@@ -533,8 +535,8 @@ void Normalkey(unsigned char key, int x, int y)
     if(key == 'a') {viewer[0]+= 1.0;ThreeDview();}
     if(key == 's') {viewer[1]-= 1.0;ThreeDview();}
     if(key == 'w') {viewer[1]+= 1.0;ThreeDview();}
-    if(key=='y')opt=1;
-    if(key=='n')opt=2;
+    if(key=='y'){opt=1;ThreeDview();}
+    if(key=='n'){opt=2;ThreeDview();}
 }
 
 
